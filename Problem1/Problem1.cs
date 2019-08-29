@@ -13,17 +13,24 @@ namespace Problem1
 	{
         static void FindPairs(int[] arr, int k)
         {
+            //  Initialize empty integer HashSet s
             HashSet<int> s = new HashSet<int>();
 
+
+            //  Loop through each element in array 
             foreach (int i in arr)
             {
-                int sum = k - i;
+                //  Calc number needed in array to equal sum(k)
+                int num = k - i;
+                 
 
-                if (s.Contains(sum))
+                //  Loop through HashSet (which currently has all numbers in array previous to i) for "num"
+                if (s.Contains(num))
                 {
-                    System.Console.WriteLine("Sets: {0} and {1}", sum, i);
+                    System.Console.WriteLine("Sets: {0} and {1}", num, i);
                 }
 
+                //  Add current (i) integer in HashSet
                 s.Add(i);
             }
         }
