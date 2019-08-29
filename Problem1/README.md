@@ -6,9 +6,10 @@ Bonus: Can you do this in one pass?
 
 Starting off the problem, we know that we need to either have two pointers on the array to add and compare with k
 	This approach requires that the first pointer would tart at the beginning of the array while the other pointer traverses the array to see if any other number adds up to k
-	This would take O(n^2) time, let's try another approach
+	Time Complexity: O(n^2)
 
 Another approach would be to use a HashSet and the Contains method which is in O(1) time
 	Input each integer into the HashSet and check the HashSet each time to see if the current number added with HashSet.Contains equals k
 	Add the current number to the HashSet
 	output the sets of numbers that add up to k
+	Time Complexity: O(n)
